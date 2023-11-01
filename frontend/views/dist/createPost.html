@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Posts</title>
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/allPosts.css">
+    <link rel="stylesheet" href="/css/searchBar.css">
+    <link rel="stylesheet" href="/css/deletepopup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
+  </head>
+  <body>
+    <div id="top-nav-bar">
+      <h1 id="appTitle">MyFlix</h1>
+      <div class="search__container">
+        <input class="search__input" type="text" placeholder="Search" id="searchInput">
+        <div id="searchUserList"></div>
+      </div>
+      <div>
+        <h1 id="publicChatHeading"></h1><a href="/logout"><i class="fa fa-arrow-right-from-bracket"></i></a>
+      </div>
+    </div>
+  </body>
+</html>
+<div id="profile-wrapper"> 
+  <div id="nav-menu">
+    <nav class="sidebar-navigation">
+      <ul>
+        <li><a href="http://localhost:3000/allPosts"><i class="fa-solid fa-shop"></i><span class="tooltip">All Posts</span></a></li>
+        <li class="active"><a href="http://localhost:3000/create-post"><i class="fa-solid fa-file-circle-plus"></i><span class="tooltip">Create Post</span></a></li>
+        <li><a href="http://localhost:3000/post"><i class="fa-solid fa-person"></i><span class="tooltip">My Posts</span></a></li>
+        <li><a href="http://localhost:3000/userProfile"><i class="fa-solid fa-address-card"></i><span class="tooltip">My Profile</span></a></li>
+        <li><a href="http://localhost:3000/private-chat"><i class="fa-solid fa-envelope"></i><span class="tooltip">Direct Message</span></a></li>
+        <li><i class="fa fa-sliders"></i><span class="tooltip">Settings          </span></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="outer-post-container">
+    <div class="login-box">
+      <h2>Add Blog Post</h2>
+      <form id="loginForm">
+        <div class="user-box">
+          <input type="text" name="title" id="title" required>
+          <label for="title">Title:</label>
+        </div>
+        <div class="user-box">
+          <select name="category" id="category" required>
+            <option value="general" disabled selected>Category</option>
+            <option value="general">general</option>
+            <option value="sports">sports</option>
+            <option value="entertainment">entertainment</option>
+            <option value="politics">politics</option>
+            <option value="travel">travel</option>
+          </select>
+        </div>
+        <div class="user-box">
+          <input name="description" id="description" rows="4" required>
+          <label for="description">Description:</label>
+        </div>
+        <div class="user-box">         
+          <label for="image_url">Select Your Image</label>
+          <button class="cloudinary-button" id="choose-file">Upload Image</button>
+        </div>
+        <button id="addPostButton" type="submit"><span></span><span></span><span></span><span> </span>Add Post</button>
+      </form>
+    </div>
+  </div>
+  <div id="users-list-container">
+    <div id="active-user-div">
+      <h3 class="toggle-active-users">Users Online<span id="userCount"></span></h3>
+      <div class="active-users">
+        <ul id="activeUsersList"></ul>
+      </div>
+    </div>
+  </div>
+  <div id="right-div">
+    <div class="container-right" id="private-chat-container">
+      <div class="private-chat-modal" id="privateChatModal">
+        <div class="modal-content" id="privateChatContent"></div><i class="fa-solid fa-xmark xmark-styles" id="close-button"></i>
+      </div>
+      <div class="message-container" id="post"></div><br>
+      <input class="message-input" id="messageInput" placeholder="Type your message...">
+      <button class="send-button" onclick="sendPrivateMessage()"><i class="fa-solid fa-share send-icon"></i></button>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/chat.js"></script>
+<script src="/js/privateChat.js"></script>
+<script src="/js/userCount.js"></script>
+<script src="/js/createPostButton.js"></script>
+<script src="/js/searchBar.js"></script>
+<script src="/js/logout.js"></script>

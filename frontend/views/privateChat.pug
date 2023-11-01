@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Chat Application
+    link(rel='stylesheet', href='/css/privateChat.css')
+
+  body
+    h1#publicChatHeading
+    div#flexDiv
+     div#left-div
+      .container
+       .active-users
+         h3 Active Users
+         ul#activeUsersList
+     div#right-div
+      .container-right#private-chat-container        
+          .private-chat-modal#privateChatModal
+              .modal-content#privateChatContent
+          .message-container#post
+          br
+          input#messageInput.message-input(placeholder='Type your message...')
+          br
+          .login-box
+            button(id="send-private-message"  class='send-button') Send Message
+          .user-count#userCount
+   
+  script(src='https://cdn.socket.io/4.0.0/socket.io.min.js')
+  script(src='/js/index.js')
+  script(src='/js/chat.js')
+  script(src='/js/privateChat.js')
+  script(src='/js/userCount.js')

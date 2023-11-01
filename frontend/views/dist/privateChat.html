@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="/css/privateChat.css">
+  </head>
+  <body>
+    <h1 id="publicChatHeading"></h1>
+    <div id="flexDiv">
+      <div id="left-div">
+        <div class="container">
+          <div class="active-users">
+            <h3>Active Users</h3>
+            <ul id="activeUsersList"></ul>
+          </div>
+        </div>
+      </div>
+      <div id="right-div">
+        <div class="container-right" id="private-chat-container">       
+          <div class="private-chat-modal" id="privateChatModal">
+            <div class="modal-content" id="privateChatContent"></div>
+          </div>
+          <div class="message-container" id="post"></div><br>
+          <input class="message-input" id="messageInput" placeholder="Type your message..."><br>
+          <div class="login-box">
+            <button class="send-button" onclick="sendPrivateMessage()">Send Message</button>
+          </div>
+          <div class="user-count" id="userCount"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/chat.js"></script>
+  <script src="/js/privateChat.js"></script>
+  <script src="/js/userCount.js"></script>
+</html>

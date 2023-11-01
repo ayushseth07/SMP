@@ -1,0 +1,76 @@
+include header.pug
+
+div#profile-wrapper
+  div#nav-menu
+    nav.sidebar-navigation
+      ul
+        li
+          a(href="http://localhost:3000/allPosts")
+            i.fa-solid.fa-shop
+            span.tooltip All Posts
+        li
+          a(href="http://localhost:3000/create-post")
+            i.fa-solid.fa-file-circle-plus
+            span.tooltip Create Post
+        li
+          a(href="http://localhost:3000/post")
+            i.fa-solid.fa-person
+            span.tooltip My Posts
+        li.active
+          a(href="http://localhost:3000/userProfile")
+            i.fa-solid.fa-address-card
+            span.tooltip My Profile
+        li
+          i.fa.fa-sliders
+          span.tooltip Settings
+
+  div#user-detail-container
+    div#user-detail-inner-container.userInfo-card 
+      div.post-card-inner.center
+        div.profile
+          div.image
+            .circle-1
+            .circle-2
+            img#user-image
+          div.content
+           p#name
+           p#gender                               
+           p#profile 
+           p#company
+           p#blood_group
+        .stats 
+         .box
+          span#age.value 
+          span.parameter Age
+         .box
+          span#total-likes.value 
+          span.parameter Likes
+         .box
+          spa.value 9
+          span.parameter Followers
+  div#users-list-container
+    #active-user-div
+      h3.toggle-active-users Users Online
+      span#userCount
+      .active-users
+        ul#activeUsersList
+
+  div#right-div
+    .container-right#private-chat-container
+      .private-chat-modal#privateChatModal
+        .modal-content#privateChatContent
+          i.fa-solid.fa-xmark.xmark-styles#close-button
+      .message-container#post
+        br
+        input#messageInput.message-input(placeholder='Type your message...')
+        button#send-private-message.send-button
+          i.fa-solid.fa-share.send-icon
+
+script(src='https://cdn.socket.io/4.0.0/socket.io.min.js')
+script(src='/js/index.js')
+script(src='/js/chat.js')
+script(src='/js/privateChat.js')
+script(src='/js/userCount.js')
+script(src='/js/searchBar.js')
+script(src='/js/userInfo.js')
+script(src="/js/logout.js")

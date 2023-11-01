@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Chat Application
+    link(rel='stylesheet', href='/css/app2.css')
+
+  body
+    .container
+      header
+        h1#publicChatHeading
+      .chat-container
+        .message-container#post1
+        br
+        input#messageInput.message-input(placeholder='Type your message...')
+        br
+        .login-box
+         button(onclick='sendMessage()' class='send-button') Send Message
+      .user-count#userCount
+    //- .container
+    //-     .active-users
+    //-       h3 Active Users
+    //-       ul#activeUsersList
+    //-     .private-chat-modal#privateChatModal
+    //-       .modal-content#privateChatContent
+   
+  script(src='https://cdn.socket.io/4.0.0/socket.io.min.js')
+  script(src='/js/index.js')
+  script(src='/js/chat.js')
+  script(src='/js/userCount.js')
+  script(src="/js/logout.js")

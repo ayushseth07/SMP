@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Complete Profile</title>
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/allPosts.css">
+    <link rel="stylesheet" href="/css/searchBar.css">
+    <link rel="stylesheet" href="/css/deletepopup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
+  </head>
+  <body>
+    <div class="login-box">
+      <h2>Complete Profile</h2>
+      <form id="dataForm">
+        <div class="user-box">
+          <input type="text" name="profile" id="profile" required>
+          <label for="title">Profile:</label>
+        </div>
+        <div class="user-box">
+          <select name="gender" id="gender" required>
+            <option value="gender" disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female      </option>
+          </select>
+        </div>
+        <div class="user-box">
+          <input name="age" id="age" required>
+          <label for="description">Age:</label>
+        </div>
+        <div class="user-box">
+          <input name="company" id="company" required>
+          <label for="description">Comapny:</label>
+        </div>
+        <div class="user-box">
+          <input name="bloodgroup" id="bloodgroup" required>
+          <label for="description">Blood Group:</label>
+        </div>
+        <div class="user-box">                           
+          <label for="image_url">Profile Picture </label>
+          <button class="cloudinary-button" id="choose-file">Upload Image</button>
+        </div>
+        <button id="addDataButton" type="submit"><span></span><span></span><span></span><span> </span>Submit</button>
+      </form>
+    </div>
+  </body>
+  <script src="/js/inputUserData.js"></script>
+</html>

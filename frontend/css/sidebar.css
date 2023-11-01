@@ -1,0 +1,84 @@
+.sidebar-navigation {
+    display: inline-block;
+    min-height: 100vh;
+    width: 100%;
+  }
+  .sidebar-navigation ul {
+    text-align: center;
+    color: white;
+    list-style-type:none;
+    padding-left: 0!important;
+  }
+  .sidebar-navigation ul li {
+    padding: 20px 0;
+    cursor: pointer;
+    transition: all ease-out 120ms;
+    margin-bottom: 10px;
+    background-color: lightblue;
+}
+.sidebar-navigation ul li:hover{
+  width: 7vw;
+}
+  .sidebar-navigation ul li i {
+    display: block;
+    font-size: 24px;
+    transition: all ease 450ms;
+    color: white;
+  }
+  .sidebar-navigation ul li .tooltip {
+    display: inline-block;
+    position: absolute;
+    background-color: lightblue;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-top: -26px;
+    left: 90px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+  .sidebar-navigation ul li .tooltip:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: 10px;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+    color:white;
+  }
+  .sidebar-navigation ul li:hover {
+    background-color: #22252E;
+  }
+  .sidebar-navigation ul li:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  .sidebar-navigation ul li.active {
+    background-color: #22252E;
+    width: 7vw;
+  }
+  .sidebar-navigation ul li.active i {
+    color: #98D7EC;
+  }
+
+  li a:link {
+    color: white;
+    text-decoration: none; /* Remove the underline if needed */
+}
+
+/* Visited links */
+li a:visited {
+    color: white;
+    text-decoration: none; /* Remove the underline if needed */
+}
+
+/* Mouse over or active links */
+a:hover, a:active {
+    color: white;
+    text-decoration: underline; /* Add an underline on hover/active if needed */
+}
+  

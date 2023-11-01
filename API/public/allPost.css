@@ -1,0 +1,284 @@
+#left-div{
+    width: 20vw;
+    }
+    #right-div{
+       position:absolute;
+       bottom: 0;
+       z-index: 100;
+       right: 13vw;
+       display: none;
+    }
+    #top-nav-bar {
+        color: black;
+        margin: 0 auto;
+        padding: 12px !important;
+        background: lightblue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #publicChatHeading,#appTitle{
+        font-size: 16px;
+        text-align: right;
+        margin:0;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .container-right {
+        position: relative;
+        padding: 40px;
+        background: white;
+        border:1px solid #313442;
+        border-radius: 10px;
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        font-size: 14px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    #userName {
+        padding: 10px;
+        font-size: 16px;
+        width: calc(100% - 20px);
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: white;
+        box-sizing: border-box;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    .message-sent {
+        float: right;
+        text-align: right;
+    }
+    
+    .message-received {
+        float: left;
+        text-align: left;}
+    
+    .message-received,.message-sent{
+        padding: 5px 15px;
+        font-size: 13px;
+        background-color: #f5f5f5;
+        display: block;
+        border-radius: 10px;
+        margin: 8px;
+    }
+    .message-container {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 225.2px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+    .message-container::-webkit-scrollbar {
+        display: none;
+      }
+    .message-input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 14px;
+        display: inline-block;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 268px;
+    
+    }
+    .message-input:focus {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 12px;
+        margin-bottom: 10px;
+        display: inline-block;
+        position: absolute;
+        bottom: -10px;
+        left:0;
+    
+    }
+    
+    .send-button {
+        position: absolute;
+        display: inline-block;
+        border: none;
+        font-size: 16px;
+        bottom: -3.5px;
+        right: 2px;
+        background: transparent;
+    }
+    #private-chat-container{
+        display: none;
+    }
+    .send-button:hover {
+        font-size: 12px;
+        background: transparent;
+    
+    }
+    
+    .user-count {
+        margin-top: 10px;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    /* Additional CSS for active users popup */
+    .active-users-popup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        cursor: pointer;
+    }
+    
+    .active-users-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .active-user-popup {
+        padding: 5px 0;
+        cursor: pointer;
+    }
+    
+    .active-user-popup:hover {
+        background-color: #f2f2f2;
+    }
+    #activeUsersList{
+        color: black;
+        list-style-type: none;
+        text-align: left;
+        padding-left: 17px;
+    }
+    #activeUsersList .active-user{
+        margin-bottom: 7px;
+    }
+    .active-users{
+        color:white;
+        font-size: 18px;
+        text-align: center;
+        display: inline;
+        margin-top: 5px;
+    }
+    .active-users h3{
+        padding: 5px;
+    }
+    ul li .count-span{
+        border-radius: 50%;
+        background: green;
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        position: absolute;
+        margin: 5px 5px 0 0;
+        right: 5px;
+    }
+    
+    .private-chat-modal{
+        position: absolute;
+        top:0;
+        margin:0;
+        background-color: lightblue;
+        color:white;
+        left:0;
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    
+    }
+    #privateChatContent{
+        padding: 8px;
+        font-size: 12px;
+    }
+    
+    .xmark-styles{
+        color: white;
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+    }
+    
+    .day-header {
+        color: #36454F; 
+        padding: 5px;
+        margin: 10px auto;
+        border-radius: 5px;
+        text-align: center;
+        width: 80%;
+        font-size: 12px;
+      }
+    
+      .title-bar {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        margin:15px;
+      }
+      
+      .title-bar i {
+        margin-right: 10px; 
+        font-size: 24px;
+      }
+      
+      .title-bar span {
+        margin-left: auto; 
+        color: #999;
+        font-size: 14px; 
+      }
+      .comment-of-email-id {
+        background-color: #f2f2f2;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        max-height: 100px;
+        overflow-y: auto;
+        text-align: left;
+        width: 100%;
+        display: none;
+    }
+    
+    .comment-of-email-id::-webkit-scrollbar{display: none;}
+    
+    .name-links {
+        text-decoration: none;
+        cursor: pointer;
+        color: #22252E!important;
+      }
+      
+      .name-links:hover,
+      .name-links:visited,
+      .name-links:active {
+        text-decoration: none;
+        color: #22252E;
+      }
+      

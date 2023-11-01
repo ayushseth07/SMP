@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title Login
+    link(rel='stylesheet', href='/css/login.css')
+  body
+    #top-nav-bar
+     h2 MYFlix
+     div
+       ul.nav-links
+         li
+           a(href="http://localhost:8080/user/register") Register
+         li
+           a(href="http://localhost:3000/login") Login
+
+    .login-box
+      h2 Login
+      form#loginForm()
+        .user-box
+          input(type='email', id='email', name='email', required)
+          label(for='email') Email
+        .user-box
+          input(type='password', id='password', name='password', required)
+          label(for='password') Password
+        button(type='submit' class="custom-btn")
+         span
+          | Login           
+        button#forgotPassword(type='button'  class="custom-btn") 
+         span
+          | Forgot Password
+  script(src="./js/login.js")
+

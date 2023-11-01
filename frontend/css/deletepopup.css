@@ -1,0 +1,43 @@
+.hidden {
+    display: none;
+  }
+  
+  #confirmation-box {
+    height: 100vh;
+    position: fixed;
+
+    background-color: #808080ab;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 100vw;
+}
+  .confirmation-content {
+    text-align: right;
+    position: fixed;
+    background: white;
+    padding: 35px;
+         top: 50%; 
+    left: 50%;
+     transform: translate(-50%, -50%); 
+  }
+  /* .confirmation-content p,.confirmation-buttons{
+    border: 1px solid #f7e7e7;
+    padding: 20px;
+    border-radius: 5px;
+  }
+   */
+  
+  .confirmation-buttons {
+    margin-top: 10px;
+  }
+  .confirmation-buttons button{
+  
+        outline: none;
+        cursor: pointer;
+        background: none;
+        transition: 0.5s;
+        font-size: 14px;
+        border-radius: 5px;
+        margin-left: 10px;
+  }
+  

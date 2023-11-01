@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Display Posts
+    link(rel='stylesheet', href='/css/sidebar.css')
+    link(rel='stylesheet', href='/css/login.css')
+    link(rel='stylesheet', href='/css/allPosts.css')
+    link(rel='stylesheet', href='/css/searchBar.css')  
+    link(rel='stylesheet', href='/css/deletepopup.css')  
+    link(rel='stylesheet', href='/css/userProfile.css')  
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css')
+    script(src="https://upload-widget.cloudinary.com/global/all.js")
+  body
+   
+   div#top-nav-bar
+     h1#appTitle MyFlix
+     .search__container
+        input.search__input(type="text", placeholder="Search" , id="searchInput")
+        div#searchUserList
+     div.nav-userdata
+      div#profileImageHeading
+      h1#publicChatHeading
+      a(href="/logout")
+       i.fa.fa-arrow-right-from-bracket
+   

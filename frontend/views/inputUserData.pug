@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    title Complete Profile
+    link(rel='stylesheet', href='/css/sidebar.css')
+    link(rel='stylesheet', href='/css/login.css')
+    link(rel='stylesheet', href='/css/allPosts.css')
+    link(rel='stylesheet', href='/css/searchBar.css')  
+    link(rel='stylesheet', href='/css/deletepopup.css')  
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css')
+    script(src="https://upload-widget.cloudinary.com/global/all.js")
+  body
+        .login-box
+          h2 Complete Profile
+          form#dataForm()
+           .user-box
+             input(type='text', name='profile', id='profile', required)
+             label(for='title') Profile:
+
+           .user-box
+             select(name='gender', id='gender', required)
+                option(value='gender' disabled selected) Gender
+                option(value='male') Male
+                option(value='female') Female      
+           .user-box
+              input(name='age', id='age', required)    
+              label(for='description') Age:
+           .user-box
+              input(name='company', id='company', required)    
+              label(for='description') Comapny:
+           .user-box
+              input(name='bloodgroup', id='bloodgroup', required)    
+              label(for='description') Blood Group:
+           .user-box                            
+              label(for='image_url') Profile Picture:
+              button#choose-file.custom-btn
+               | Upload Image
+           div 
+             button#addDataButton(type='submit' class="custom-btn")
+              span 
+               | Submit
+  script(src='/js/inputUserData.js')

@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel='stylesheet', type='text/css', href='/css/app1.css')
+  body
+    .container
+      h1 WELCOME TO CHATROOM
+      label
+        input#userName(type='text', placeholder='Enter username')
+      br
+      button(onclick='goToIndex2()') JOIN ROOM
+    script.
+      function generateRandomToken() {
+        return Math.random().toString(36).substring(2, 15);
+      }
+
+      function goToIndex2() {
+        const username = document.getElementById("userName").value;
+        const token = generateRandomToken();
+        sessionStorage.setItem("currentToken", token);
+        localStorage.setItem(token, username);
+        window.location.href = "chatRoom";
+      }
